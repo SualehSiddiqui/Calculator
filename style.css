@@ -1,20 +1,70 @@
-
+body{
+    background-color: antiquewhite;
+}
 
 .container{
     width: 100%;
     height: 100vh;
-    background-image: url(Images/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: antiquewhite;
 }
 
-.backgtound-div{
+.background-div{
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-calc{
-    background-color: orange;
+    border-radius: 10px;
+    background-color: #abdef1;
     width: 350px;
-    height: 450px;
+    height: 460px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.calc-screen{
+    background-color: aliceblue;
+    width: 320px;
+    height: 90px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 20px;
+    cursor: text;
+}
+
+.numbers{
+    margin-top: 20px;
+    width: 320px;
+    height: 350px;
+    background-color: #abdef1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.num-div{
+    width: 75px;
+    height: 60px;
+    background-color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.num-div > span{
+    
+    color: black;
+    background-color: aliceblue;
+    font-size: 23px;
+}
+
+.back-img{
+    text-align: end;
+    width: 40px;
 }
