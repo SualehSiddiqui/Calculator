@@ -10,76 +10,87 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
+<!-- main-calc -->
 
 <body>
     <div class="container">
         <div class="background-div">
-            <div class="main-calc">
-                <div class="calc-screen" id="calc-screen"></div>
-                <div class="numbers">
-                    <div class="per num-div" id="per" value="%">
-                        <span>%</span>
-                    </div>
-                    <div class="clear-one num-div" id="clear-one" value="CE">
-                        <span>CE</span>
-                    </div>
-                    <div class="clear-all num-div" id="clear-all" value="AC">
-                        <span>AC</span>
-                    </div>
-                    <div class="back-img-div num-div" id="back-img" value="Cross">
-                        <span><img src="Images/backspace-icon-16.jpg" class="back-img" alt=""></span>
-                    </div>
-                    <div class="num-7 num-div" id="num-7" value="7">
-                        <span>7</span>
-                    </div>
-                    <div class="num-8 num-div" id="num-8" value="8">
-                        <span>8</span>
-                    </div>
-                    <div class="num-9 num-div" id="num-9" value="9">
-                        <span>9</span>
-                    </div>
-                    <div class="div num-div" id="div" value="/">
-                        <span>/</span>
-                    </div>
-                    <div class="num-4 num-div" id="num-4" value="4">
-                        <span>4</span>
-                    </div>
-                    <div class="num-5 num-div" id="num-5" value="5">
-                        <span>5</span>
-                    </div>
-                    <div class="num-6 num-div" id="num-6"  value="6">
-                        <span>6</span>
-                    </div>
-                    <div class="multi num-div" id="multi" value="*">
-                        <span>*</span>
-                    </div>
-                    <div class="num-1 num-div" id="num-1" value="1">
-                        <span>1</span>
-                    </div>
-                    <div class="num-2 num-div" id="num-2" value="2">
-                        <span>2</span>
-                    </div>
-                    <div class="num-3 num-div" id="num-3" value="3">
-                        <span>3</span>
-                    </div>
-                    <div class="sub num-div" id="sub"  value="-">
-                        <span>-</span>
-                    </div>
-                    <div class="point num-div" id="point" value=".">
-                        <span>.</span>
-                    </div>
-                    <div class="num-0 num-div" id="num-0"  value="0">
-                        <span>0</span>
-                    </div>
-                    <div class="equal num-div" id="equal"  value="=">
-                        <span>=</span>
-                    </div>
-                    <div class="add num-div" id="add" value="+" onclick="document.querySelector('#calc-screen').innerHTML = document.querySelector('#add').getAttribute('value')">
-                        <span>+</span>
+            <div class="card   ">
+                <div class="card-info main-calc ">
+                    <div class="calc-screen" id="calc-screen"></div>
+                    <div class="numbers ">
+                        <div class="per num-div" id="start-minus" value="%" onclick="root()">
+                            <span>√</span>
+                        </div>
+                        <div class="clear-one num-div" id="clear-one" value="CE" onclick="square()">
+                            <span>x<sup class="square">2</sup> </span>
+                        </div>
+                        <div class="clear-all num-div" id="clear-all" value="AC" onclick="allClear()">
+                            <span>AC</span>
+                        </div>
+                        <div class="back-img-div num-div" id="back-img" value="Cross" onclick="backSpace()">
+                            <span><img src="Images/backspace-icon-16.jpg" class="back-img" alt=""></span>
+                        </div>
+                        <div class="num-7 num-div" id="num-7" value="7" onclick="numSeven()">
+                            <span>7</span>
+                        </div>
+                        <div class="num-8 num-div" id="num-8" value="8" onclick="numEight()">
+                            <span>8</span>
+                        </div>
+                        <div class="num-9 num-div" id="num-9" value="9" onclick="numNine()">
+                            <span>9</span>
+                        </div>
+                        <div class="div num-div" id="div" value="/" onclick="divide()">
+                            <span>/</span>
+                        </div>
+                        <div class="num-4 num-div" id="num-4" value="4" onclick="numFour()">
+                            <span>4</span>
+                        </div>
+                        <div class="num-5 num-div" id="num-5" value="5" onclick="numFive()">
+                            <span>5</span>
+                        </div>
+                        <div class="num-6 num-div" id="num-6" value="6" onclick="numSix()">
+                            <span>6</span>
+                        </div>
+                        <div class="multi num-div" id="multi" value="*" onclick="multiply()">
+                            <span>*</span>
+                        </div>
+                        <div class="num-1 num-div" id="num-1" value="1" onclick="numOne()">
+                            <span>1</span>
+                        </div>
+                        <div class="num-2 num-div" id="num-2" value="2" onclick="numTwo()">
+                            <span>2</span>
+                        </div>
+                        <div class="num-3 num-div" id="num-3" value="3" onclick="numThree()">
+                            <span>3</span>
+                        </div>
+                        <div class="sub num-div" id="sub" value="-" onclick="subtraction()">
+                            <span>-</span>
+                        </div>
+                        <div class="point num-div" id="point" value="." onclick="decimal()">
+                            <span>.</span>
+                        </div>
+                        <div class="num-0 num-div" id="num-0" value="0" onclick="numZero()">
+                            <span>0</span>
+                        </div>
+                        <div class="equal num-div" id="equal" value="=" onclick="answer()">
+                            <span>=</span>
+                        </div>
+                        <div class="add num-div" id="add" value="+" onclick="addition()">
+                            <span>+</span>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
+
+
+        <!-- <div class="card">
+            <div class="card-info">
+                sualeh
+            </div>
+        </div> -->
     </div>
 
 
